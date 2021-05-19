@@ -33,7 +33,7 @@
 (defn DEBUG-print'
   "Transparently logs a piece of data.
   Takes a datum and an optional descriptive text"
-  ([data] (DEBUG-print data ""))
+  ([data] (DEBUG-print "" data))
   ([data text-or-fn]
    (if (string? text-or-fn)
      (DEBUG-print text-or-fn identity data)
