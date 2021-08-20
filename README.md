@@ -2,6 +2,9 @@
 
 A Clojure and Clojurescript library with small debug helpers
 
+# DEPRECATION NOTICE
+
+This code has been moved to plug-utils.debug.
 
 # DISCLAIMER
 
@@ -11,7 +14,6 @@ Use at your own risk! Breakage is to be expected as:
 
 - Library is gradually tuned for my typical use cases.
 - I improve on my general library development
-
 
 ## LICENSE
 

@@ -1,21 +1,22 @@
 (ns plug-debug.core
-  "Some debug functionality that can be used from both Clojure and Clojurescript")
+  "Some debug functionality that can be used from both Clojure and Clojurescript.
+  DEPRECATED: Use plug-utils.debug")
 
 
 
-(def log-text
+(def ^:deprecated log-text
   "Log something that should just be a text"
   #?(:clj  println
      :cljs js/console.info))                                ; Using native js/console enables browser console to show source file and have it clickable
 
 
-(def log-pretty
+(def ^:deprecated log-pretty
   "Log a data a structure"
   #?(:clj  clojure.pprint/pprint
      :cljs js/console.info))
 
 
-(defn DEBUG-print
+(defn ^:deprecated DEBUG-print
   "Transparently logs a piece of data.
   Optionally takes a descriptive text and/or a function to process the data with before presentation."
   ([data] (DEBUG-print "" identity data))
@@ -30,7 +31,7 @@
    data))
 
 
-(defn DEBUG-print'
+(defn ^:deprecated DEBUG-print'
   "Transparently logs a piece of data.
   Takes a datum and an optional descriptive text"
   ([data] (DEBUG-print "" data))
